@@ -1,0 +1,43 @@
+#!/bin/bash -l
+#
+#SBATCH -o ./out.%j
+#SBATCH -e ./err.%j
+#SBATCH -D ./
+#SBATCH -J PY_MULTITHREADING
+#SBATCH --partition=general
+#SBATCH --nodes=2             # request a full node
+#SBATCH --ntasks-per-node=1   # only start 1 task via srun because Python multiprocessing starts more tasks internally
+#SBATCH --cpus-per-task=72    # assign all the cores to that first task to make room for Python's multiprocessing tasks
+#SBATCH --time=00:08:00
+#SBATCH --export=ALL          # Might be necessary to export env. varibles, making conda work
+#SBATCH --job-name=dask_test
+
+module purge
+module load gcc/13 
+module load anaconda/3/2023.03 
+module load openmpi/4.1
+
+# Activates the conda environment
+conda info --envs
+conda activate quspin_env
+
+# Prints the available modules
+# conda list
+
+# Important:
+# Set the number of OMP threads *per process* to avoid overloading of the node!
+export OMP_NUM_THREADS=1
+
+# Use the environment variable SLURM_CPUS_PER_TASK to have multiprocessing
+# spawn exactly as many processes as you have CPUs available.
+# srun python3 ./slurm_test.py $SLURM_CPUS_PER_TASK
+
+# Alternative execution:
+# srun conda run -n quspin_env python3 ./slurm_test.py $SLURM_CPUS_PER_TASK
+
+# 12 Number of Processes, Maximum 4GB of RAM
+rm -f scheduler.json
+mpirun --np 3 dask-mpi \
+    --nthreads 8 \
+    --memory-limit 4e9 \
+    --interface ib0
