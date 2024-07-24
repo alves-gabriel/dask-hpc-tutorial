@@ -1,0 +1,54 @@
+2024-04-05 16:36:29,753 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.181.85.123:35535'
+2024-04-05 16:36:29,784 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.181.85.123:33659'
+2024-04-05 16:36:32,357 - distributed.diskutils - INFO - Found stale lock file and directory '/raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-27y6fc66', purging
+2024-04-05 16:36:32,489 - distributed.diskutils - INFO - Found stale lock file and directory '/raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-gbopnk3_', purging
+2024-04-05 16:36:32,527 - distributed.diskutils - ERROR - Failed to remove '/raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-gbopnk3_' (failed in <built-in function rmdir>): [Errno 2] No such file or directory: '/raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-gbopnk3_'
+2024-04-05 16:36:34,198 - distributed.worker - INFO -       Start worker at:  tcp://10.181.85.123:46031
+2024-04-05 16:36:34,199 - distributed.worker - INFO -          Listening to:  tcp://10.181.85.123:46031
+2024-04-05 16:36:34,199 - distributed.worker - INFO -           Worker name:           SLURMCluster-6-1
+2024-04-05 16:36:34,199 - distributed.worker - INFO -          dashboard at:        10.181.85.123:42587
+2024-04-05 16:36:34,199 - distributed.worker - INFO - Waiting to connect to: tcp://130.183.162.116:46793
+2024-04-05 16:36:34,199 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:36:34,199 - distributed.worker - INFO -               Threads:                         36
+2024-04-05 16:36:34,199 - distributed.worker - INFO -                Memory:                   1.86 GiB
+2024-04-05 16:36:34,199 - distributed.worker - INFO -       Local Directory: /raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-zz2qe95x
+2024-04-05 16:36:34,199 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:36:34,201 - distributed.worker - INFO -       Start worker at:  tcp://10.181.85.123:39629
+2024-04-05 16:36:34,201 - distributed.worker - INFO -          Listening to:  tcp://10.181.85.123:39629
+2024-04-05 16:36:34,201 - distributed.worker - INFO -           Worker name:           SLURMCluster-6-0
+2024-04-05 16:36:34,201 - distributed.worker - INFO -          dashboard at:        10.181.85.123:38717
+2024-04-05 16:36:34,202 - distributed.worker - INFO - Waiting to connect to: tcp://130.183.162.116:46793
+2024-04-05 16:36:34,202 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:36:34,202 - distributed.worker - INFO -               Threads:                         36
+2024-04-05 16:36:34,202 - distributed.worker - INFO -                Memory:                   1.86 GiB
+2024-04-05 16:36:34,202 - distributed.worker - INFO -       Local Directory: /raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-9z2v8v84
+2024-04-05 16:36:34,202 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:36:36,847 - distributed.worker - INFO - Starting Worker plugin shuffle
+2024-04-05 16:36:36,847 - distributed.worker - INFO -         Registered to: tcp://130.183.162.116:46793
+2024-04-05 16:36:36,848 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:36:36,848 - distributed.core - INFO - Starting established connection to tcp://130.183.162.116:46793
+2024-04-05 16:36:36,849 - distributed.worker - INFO - Starting Worker plugin shuffle
+2024-04-05 16:36:36,850 - distributed.worker - INFO -         Registered to: tcp://130.183.162.116:46793
+2024-04-05 16:36:36,850 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:36:36,855 - distributed.core - INFO - Starting established connection to tcp://130.183.162.116:46793
+2024-04-05 16:41:16,357 - distributed.worker.memory - WARNING - Unmanaged memory use is high. This may indicate a memory leak or the memory may not be released to the OS; see https://distributed.dask.org/en/latest/worker-memory.html#memory-not-released-back-to-the-os for more information. -- Unmanaged memory: 1.36 GiB -- Worker memory limit: 1.86 GiB
+2024-04-05 16:41:16,642 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 1.50 GiB -- Worker memory limit: 1.86 GiB
+2024-04-05 16:41:16,977 - distributed.nanny.memory - WARNING - Worker tcp://10.181.85.123:46031 (pid=29816) exceeded 95% memory budget. Restarting...
+2024-04-05 16:41:17,014 - distributed.nanny - INFO - Worker process 29816 was killed by signal 15
+2024-04-05 16:41:17,042 - distributed.nanny - WARNING - Restarting worker
+2024-04-05 16:41:17,692 - distributed.diskutils - INFO - Found stale lock file and directory '/raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-8x6jv7f9', purging
+2024-04-05 16:41:18,095 - distributed.worker - INFO -       Start worker at:  tcp://10.181.85.123:46185
+2024-04-05 16:41:18,096 - distributed.worker - INFO -          Listening to:  tcp://10.181.85.123:46185
+2024-04-05 16:41:18,096 - distributed.worker - INFO -           Worker name:           SLURMCluster-6-1
+2024-04-05 16:41:18,096 - distributed.worker - INFO -          dashboard at:        10.181.85.123:41251
+2024-04-05 16:41:18,096 - distributed.worker - INFO - Waiting to connect to: tcp://130.183.162.116:46793
+2024-04-05 16:41:18,096 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:41:18,096 - distributed.worker - INFO -               Threads:                         36
+2024-04-05 16:41:18,096 - distributed.worker - INFO -                Memory:                   1.86 GiB
+2024-04-05 16:41:18,096 - distributed.worker - INFO -       Local Directory: /raven/u/alvesgo/Cluster/Jupyter-Gabriel/dask-tutorial-hpc/Cluster/Jupyter-Gabriel/Dask-test/dask-scratch-space/worker-9q2whbwe
+2024-04-05 16:41:18,096 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:41:18,611 - distributed.worker - INFO - Starting Worker plugin shuffle
+2024-04-05 16:41:18,611 - distributed.worker - INFO -         Registered to: tcp://130.183.162.116:46793
+2024-04-05 16:41:18,611 - distributed.worker - INFO - -------------------------------------------------
+2024-04-05 16:41:18,612 - distributed.core - INFO - Starting established connection to tcp://130.183.162.116:46793
+slurmstepd: error: *** JOB 9964622 ON ravc2339 CANCELLED AT 2024-04-05T17:06:50 DUE TO TIME LIMIT ***

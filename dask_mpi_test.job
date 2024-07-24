@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+#SBATCH --job-name=dask_mpi_test
+#SBATCH -o ./out.%j
+#SBATCH -e ./err.%j
+#SBATCH -J dask-mpi-test
+#SBATCH -p general
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --mem=32GB
+#SBATCH -t 00:10:00
+#SBATCH --export=ALL          # Might be necessary to export env. varibles, making conda work
+
+# Activate Anaconda environment
+source activate dask_env
+
+# Run the MPI command
+mpirun -np 8 dask-mpi --worker-class distributed.Worker --scheduler-file scheduler.json
